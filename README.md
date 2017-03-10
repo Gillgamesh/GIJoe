@@ -50,7 +50,7 @@ In this case, our worst case performance example was generated in the cleanest w
 | 4096   | 0.0045753745976999894 |
 | 8192   | 0.018307890423199982  |
 
-![Worst Case Graph](.img/worstGraph.png)
+![Worst Case Graph](.img/worstGraphs.png)
 
 Color reference/Regression Equations are as follows:
 
@@ -77,7 +77,7 @@ The average case, on the other hand, was generated simply by making every elemen
 | 4096   | 3.0650731039999864E-4 |
 | 8192   | 6.428459153E-4        |
 
-![Average Case Graph](.img/avgraph.png)
+![Average Case Graph](.img/avgGraphs.png)
 
 Color reference/Regression Equations are as follows:
 
