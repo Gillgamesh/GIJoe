@@ -26,7 +26,7 @@ Sadly, likely due to the performance of up to n recursive calls, extremely large
 ###Worst Case vs. Average Case
 This scatterplot shows that while the worst case lines up nearly perfectly with a quadratic regression, the average case appears to be near linear as logn grows ever smaller.
 
-[Scatter Plot](.img/scatter.png)
+![Scatter Plot](.img/scatter.png)
 
 ####Worst Case:
 
@@ -50,14 +50,15 @@ In this case, our worst case performance example was generated in the cleanest w
 | 4096   | 0.0045753745976999894 |
 | 8192   | 0.018307890423199982  |
 
-[Worst Case Graph](.img/worstGraph.png)
+![Worst Case Graph](.img/worstGraph.png)
 
 Color reference/Regression Equations are as follows:
 
-[Worst Case Graph Equations](.img/worstFunctions.png)
+![Worst Case Graph Equations](.img/worstFunctions.png)
 
 ####Average Case:
 The average case, on the other hand, was generated simply by making every element in an array equal to a random integer. Over 10,000 runs, the best cases and worst cases tend to cancel out, and generate something that most closely represents O(nlogn). This can be seen by how closely the regression matches the scatter points, and also can be properly calculated by calculating the standard deviations.
+
 | Length | Time (s)              |
 |--------|-----------------------|
 | 1      | 2.182841000000086E-7  |
@@ -76,11 +77,11 @@ The average case, on the other hand, was generated simply by making every elemen
 | 4096   | 3.0650731039999864E-4 |
 | 8192   | 6.428459153E-4        |
 
-[Average Case Graph](.img/avgraph.png)
+![Average Case Graph](.img/avgraph.png)
 
 Color reference/Regression Equations are as follows:
 
-[Average Case Graph Equations](.img/avgFunctions.png)
+![Average Case Graph Equations](.img/avgFunctions.png)
 
 This same testing methodlogy was also used for much larger arrays, but surprisingly produced runtimes that had a greater variance in trend. While between 2^25 to 2^26 there is a quadruple increase in time, suggesting O(n^2), other points suggest O(nlogn). This is likely due to the small amount of test cases.Sadly, because of how long they take to generate, it was not practicle to graph them.
 
