@@ -29,7 +29,7 @@ public class QuickSortTester {
 //MODIFIED VERSION: mess a preexisitng array
     public static void mess( int[] a, int nums) {
         for( int i = 0 ; i<a.length; i++ )
-            a[i] = (int) Math.random()*nums;
+            a[i] = (int) (Math.random()*nums);
     }
 
     public static void mess( int[] a) {
@@ -77,8 +77,8 @@ public class QuickSortTester {
         double[] times = new double[tries];
         //define start time and end time:
         for (int i=0; i < tries; i++) {
-            //rescramble the array and try again
-            mess(arr);
+            //rescramble the array and try again. Let it's elements range from 1-10000, the numbers dont actually matter
+            mess(arr,10000);
             startTime = System.nanoTime();
             QuickSort.qsort(arr);
             ans = arr;

@@ -1,4 +1,4 @@
-public class QuickSort 
+public class QuickSort
 {
     //--------------v  HELPER METHODS  v--------------
     //swap values at indices x, y in array o
@@ -8,7 +8,7 @@ public class QuickSort
 	o[y] = tmp;
     }
 
-    //print input array 
+    //print input array
     public static void printArr( int[] a ) {
 	for ( int o : a )
 	    System.out.print( o + " " );
@@ -44,18 +44,18 @@ public class QuickSort
     public static void qsort( int[] d ){
 
 	qsortH (d, 0, d.length-1);
-	
+
     }
 
     public static void qsortH (int[] d, int first, int last) {
-	int mid = (first + last) / 2; 
+	int mid = first + (int) (Math.random()*(last-first)); 
 	if (first < last) {
 	    int pivotPos = partition (d, first, last, mid);
 	    qsortH (d, first, pivotPos - 1);
 	    qsortH (d, pivotPos + 1, last);
 	}
     }
-    
+
     public static int partition (int [] arr, int first, int last, int toSort){
 	int v = arr[toSort];
 	swap (toSort, last, arr);
@@ -71,18 +71,18 @@ public class QuickSort
     }
 
 
-    
+
     //main method for testing
-    public static void main( String[] args ) 
+    public static void main( String[] args )
     {
-	
+
 
 	//get-it-up-and-running, static test case:
 	int [] arr1 = {7,1,5,12,3};
 	System.out.println("\narr1 init'd to: " );
 	printArr(arr1);
 
-	qsort( arr1 );	
+	qsort( arr1 );
        	System.out.println("arr1 after qsort: " );
 	printArr(arr1);
 
@@ -90,7 +90,7 @@ public class QuickSort
 	int[] arrN = new int[10];
 	for( int i = 0; i < arrN.length; i++ )
 	arrN[i] = i;
-       
+
 	System.out.println("\narrN init'd to: " );
 	printArr(arrN);
 
@@ -101,7 +101,7 @@ public class QuickSort
 	qsort( arrN );
 	System.out.println("arrN after sort: " );
 	printArr(arrN);
-	
+
 
 
 	//get-it-up-and-running, static test case w/ dupes:
@@ -109,7 +109,7 @@ public class QuickSort
 	System.out.println("\narr2 init'd to: " );
 	printArr(arr2);
 
-	qsort( arr2 );	
+	qsort( arr2 );
        	System.out.println("arr2 after qsort: " );
 	printArr(arr2);
 
@@ -118,7 +118,7 @@ public class QuickSort
 	int[] arrMatey = new int[20];
 	for( int i = 0; i < arrMatey.length; i++ )
 	arrMatey[i] = (int)( 48 * Math.random() );
-       
+
 	System.out.println("\narrMatey init'd to: " );
 	printArr(arrMatey);
 
@@ -129,7 +129,7 @@ public class QuickSort
 	qsort( arrMatey );
 	System.out.println("arrMatey after sort: " );
 	printArr(arrMatey);
-	
+
 
     }//end main
 
